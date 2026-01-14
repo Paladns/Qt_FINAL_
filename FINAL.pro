@@ -9,13 +9,16 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    createactivitydialog.cpp \
     main.cpp \
     logindialog.cpp
 
 HEADERS += \
+    createactivitydialog.h \
     logindialog.h
 
 FORMS += \
+    createactivitydialog.ui \
     logindialog.ui
 
 # Default rules for deployment.
