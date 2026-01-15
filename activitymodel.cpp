@@ -27,18 +27,18 @@ QVariant ActivityModel::headerData(int section, Qt::Orientation orientation, int
     return QSqlQueryModel::headerData(section, orientation, role);
 }
 
-// void ActivityModel::refresh(const QString& role, int userId)
-// {
-//     QSqlQuery query = DatabaseManager::instance().getActivities(role, userId);
-//     setQuery(std::move(query)); // 使用move避免已弃用的copy构造函数
-// }
+void ActivityModel::refresh(const QString& role, int userId)
+{
+    QSqlQuery query = DatabaseManager::instance().getActivities(role, userId);
+    setQuery(std::move(query)); // 使用move避免已弃用的copy构造函数
+}
 
-// int ActivityModel::getActivityId(int row) const
-// {
-//     if (row < 0 || row >= rowCount()) {
-//         return -1;
-//     }
+int ActivityModel::getActivityId(int row) const
+{
+    if (row < 0 || row >= rowCount()) {
+        return -1;
+    }
     
-//     QModelIndex index = this->index(row, 0);
-//     return data(index).toInt();
-// }
+    QModelIndex index = this->index(row, 0);
+    return data(index).toInt();
+}

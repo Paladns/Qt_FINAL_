@@ -9,17 +9,30 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    createactivitydialog.cpp \
+    activitymodel.cpp \
+    adminwidget.cpp \
+    csvexporttask.cpp \
+    databasemanager.cpp \
     main.cpp \
-    logindialog.cpp
+    logindialog.cpp \
+    organizerwidget.cpp \
+    studentwidget.cpp
 
 HEADERS += \
-    createactivitydialog.h \
-    logindialog.h
+    activitymodel.h \
+    adminwidget.h \
+    csvexporttask.h \
+    databasemanager.h \
+    logindialog.h \
+    organizerwidget.h \
+    studentwidget.h
 
 FORMS += \
+    adminwidget.ui \
     createactivitydialog.ui \
-    logindialog.ui
+    logindialog.ui \
+    organizerwidget.ui \
+    studentwidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
